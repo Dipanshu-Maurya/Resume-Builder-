@@ -1,8 +1,8 @@
 import React from "react";
 import ClassicTemplate from "./templates/ClassicTemplate";
 import ModernTemplate from "./templates/ModernTemplate";
-import MinimalTemplate from "./templates/MinimalImageTemplate";
-import MinimalImageTemplate from "./templates/ClassicTemplate";
+import MinimalTemplate from "./templates/MinimalTemplate";
+import MinimalImageTemplate from "./templates/MinimalImageTemplate";
 
 const ResumePreview = ({ data, template, accentColor, classes = "" }) => {
   const renderTemplate = () => {
