@@ -42,7 +42,7 @@ const ResumePreview = ({ data, template, accentColor, classes = "" }) => {
             html,
             body {
               width: 8.5in;
-              height: 11in;
+              height: auto;
               overflow: hidden;
             }
             body * {
@@ -58,7 +58,7 @@ const ResumePreview = ({ data, template, accentColor, classes = "" }) => {
             }
             #resume-preview {
               position: absolute;
-              keft: 0;
+              left: 0;
               top: 0;
               width: 100%;
               height: auto;
@@ -66,6 +66,9 @@ const ResumePreview = ({ data, template, accentColor, classes = "" }) => {
               padding: 0;
               box-shadow: none !important;
               border: none !important;
+              page-break-inside: avoid;
+              page-break-after: avoid;
+              page-break-before: avoid;
             }
           }
         `}

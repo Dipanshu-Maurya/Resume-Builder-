@@ -10,7 +10,7 @@ const MinimalTemplate = ({ data, accentColor }) => {
     };
 
     return (
-        <div className="max-w-4xl mx-auto p-8 bg-white text-gray-900 font-light">
+        <div className="  max-w-4xl mx-auto p-8 bg-white text-gray-900 font-light print:min-h-[11in] print:text-[13px] print:leading-tight">
             {/* Header */}
             <header className="mb-10">
                 <h1 className="text-4xl font-thin mb-4 tracking-wide">
@@ -41,7 +41,7 @@ const MinimalTemplate = ({ data, accentColor }) => {
 
             {/* Experience */}
             {data.experience && data.experience.length > 0 && (
-                <section className="mb-10">
+                <section className="mb-10 print:mb-6">
                     <h2 className="text-sm uppercase tracking-widest mb-6 font-medium" style={{ color: accentColor }}>
                         Experience
                     </h2>
@@ -69,7 +69,7 @@ const MinimalTemplate = ({ data, accentColor }) => {
 
             {/* Projects */}
             {data.project && data.project.length > 0 && (
-                <section className="mb-10">
+                <section className="mb-10 print:mb-6">
                     <h2 className="text-sm uppercase tracking-widest mb-6 font-medium" style={{ color: accentColor }}>
                         Projects
                     </h2>
