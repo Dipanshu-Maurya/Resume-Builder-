@@ -39,6 +39,11 @@ const ResumePreview = ({ data, template, accentColor, classes = "" }) => {
             margin: 0;
           }
           @media print {
+          * {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            }
+
             html,
             body {
               width: 8.5in;
