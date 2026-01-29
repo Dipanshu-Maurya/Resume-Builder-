@@ -15,7 +15,7 @@ export const registerUser = async (req, res) => {
     try {
         const {name, email, password} = req.body;
 
-        // check if required fielda are present
+        // check if required fields are present
         if(!name || !email || !password){
             return res.status(400).json({message: 'Missing required fields'})
         }
@@ -53,18 +53,18 @@ export const loginUser = async (req, res) => {
 
         //check if user exists
         const user = await User.findOne({email})
-        if(user){
+        if(!user){
             return res.status(400).json({message: 'Invalid email or password'})
         }
 
         // check if password is correct
-        if(!User.comparePassword(password)){
+        if(!user.comparePassword(password)){
             return res.status(400).json({message: 'Invalid email or password'})
         }
 
         // return success message
-        const token = generateToken(newUser._id)
-        newUser.password = undefined;
+        const token = generateToken(user._id)
+        user.password = undefined;
 
         return res.status(200).json({message: 'Login successfully', token, user})
 
