@@ -65,7 +65,7 @@ export const getResumeById = async (req, res) => {
 
 
 // get resume by id public
-// GET: /api/resumed/public
+// GET: /api/resumes/public
 export const getPublicResumeById = async (req, res) => {
     try {
         const { resumeId } = req.params;
@@ -91,7 +91,7 @@ export const updateResume = async (req, res) => {
         const {resumeId, resumeData, removeBackground} = req.body
         const image = req.file;
 
-        let resumeDataCopy = JSON.parse(resumeData);
+        let resumeDataCopy = JSON.parse(JSON.stringify(resumeData));
 
         if(image){
 

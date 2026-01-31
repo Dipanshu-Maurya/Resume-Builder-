@@ -65,6 +65,7 @@ export const enhanceJobDescription = async (req, res) => {
 
 // controller for uploading a resume to the database
 // POST: /api/ai/upload-resume
+
 export const uploadResume = async (req, res) => {
   try {
 
@@ -143,5 +144,3 @@ export const uploadResume = async (req, res) => {
      return res.status(400).json({message: error.message})
   }
 };
-
-
