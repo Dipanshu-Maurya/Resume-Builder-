@@ -7,8 +7,8 @@ import upload from '../config/multer.js';
 const aiRouter = express.Router();
 
 
-aiRouter.post('/enhance-pro-sum', protect, enhanceProfessionalSummary)
-aiRouter.post('/enhance-job-desc', protect, enhanceJobDescription)
+aiRouter.post('/enhance-pro-sum', protect,enhanceProfessionalSummary)
+aiRouter.post('/enhance-job-desc',enhanceJobDescription)
 aiRouter.post('/upload-resume', protect,upload.none(),uploadResume)
 
 export default aiRouter
