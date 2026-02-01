@@ -39,15 +39,9 @@ const ResumePreview = ({ data, template, accentColor, classes = "" }) => {
             margin: 0;
           }
           @media print {
-          * {
-            -webkit-print-color-adjust: exact !important;
-            print-color-adjust: exact !important;
-            }
-
-            html,
-            body {
+              html, body {
               width: 8.5in;
-              height: auto;
+              height: 11in;
               overflow: hidden;
             }
             body * {
@@ -71,9 +65,6 @@ const ResumePreview = ({ data, template, accentColor, classes = "" }) => {
               padding: 0;
               box-shadow: none !important;
               border: none !important;
-              page-break-inside: avoid;
-              page-break-after: avoid;
-              page-break-before: avoid;
             }
           }
         `}
