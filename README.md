@@ -24,12 +24,14 @@ This application allows users to create, edit, manage, and download professional
 
 ## Project Structure
 
+```
 Resume-Builder/
 │
-├── Backend/ # Express server, APIs, Database
-├── Frontend/ # React frontend application
+├── Backend/      # Express server, APIs, Database
+├── Frontend/     # React frontend application
 ├── .gitignore
 └── README.md
+```
 
 ##  Features
 
